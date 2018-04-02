@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+
+      class Aaa extends React.Component {
+
+        render(){
+          var a = [1,2,3,4];
+          return (<div>
+          {
+             a.map((i)=>{
+              return <li>{i}</li>
+            })
+          }
+          </div>)
+        }
+      }
+
+      ReactDOM.render(
+        <div>
+              <Aaa />
+        </div>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
+
